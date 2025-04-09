@@ -22,7 +22,7 @@ public class BookDTO {
     @NotBlank(message = "Название не может быть пустым")
     private String title;
     
-    @NotNull(message = "Год не должен быть пустым")
+    @NotNull(message = "Год обязателен")
     @Positive(message = "Год не может быть отрицательным")
     @Max(value = 2025, message = "Год не может быть больше текущего")
     private Integer year;
@@ -31,11 +31,11 @@ public class BookDTO {
     @NotBlank(message = "Бренд не может быть пустым")
     private String brand;
 
-    @NotNull(message = "Количество не должен быть пустым")
+    @NotNull(message = "Количество обязательно")
     @Positive(message = "Количество не может быть отрицательным")
     private Integer stock;
 
-    @NotNull(message = "Price не должен быть пустым")
-    @Positive(message = "Price не может быть отрицательным")
+    @NotNull(message = "Цена обязательна")
+    @Positive(message = "Цена не может быть отрицательным")
     private Double price;
 }
