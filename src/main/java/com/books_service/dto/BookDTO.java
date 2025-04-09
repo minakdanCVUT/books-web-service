@@ -25,7 +25,7 @@ public class BookDTO {
     @NotNull(message = "Год обязателен")
     @Positive(message = "Год не может быть отрицательным")
     @Max(value = 2025, message = "Год не может быть больше текущего")
-    private Integer year;
+    private Integer publicationYear;
 
     @NotNull(message = "Бренд обязателен")
     @NotBlank(message = "Бренд не может быть пустым")
@@ -38,4 +38,5 @@ public class BookDTO {
     @NotNull(message = "Цена обязательна")
     @Positive(message = "Цена не может быть отрицательным")
     private Double price;
+
 }

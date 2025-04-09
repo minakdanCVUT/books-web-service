@@ -25,13 +25,13 @@ public class Book {
 
     private String title;
 
-    private int year;
+    private Integer publicationYear;
 
     private String brand;
 
-    private int stock;
+    private Integer stock;
 
-    private double price;
+    private Double price;
 
     public void updateBook(BookDTO dto){
         this.vendorCode = dto.getVendorCode();
@@ -39,6 +39,6 @@ public class Book {
         this.price = dto.getPrice();
         this.stock = dto.getStock();
         this.title = dto.getTitle();
-        this.year = dto.getYear();
+        this.publicationYear = dto.getPublicationYear();
     }
 }
