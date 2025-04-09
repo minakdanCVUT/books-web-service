@@ -57,6 +57,4 @@ public class BookController {
                                @Valid @RequestBody BookDTO updateDTO){
         bookService.updateBookById(id, updateDTO);
     }
-
-
 }

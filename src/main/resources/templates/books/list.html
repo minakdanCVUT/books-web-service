@@ -60,7 +60,7 @@
         <ul class="pagination justify-content-center">
             <li class="page-item" th:classappend="${books.first} ? 'disabled' : ''">
                 <a class="page-link"
-                   th:href="@{/books(title=${param.title}, brand=${param.brand}, year=${param.year}, page=${books.number})}">
+                   th:href="@{/api/books(title=${param.title}, brand=${param.brand}, year=${param.year}, page=${books.number})}">
                     &laquo;
                 </a>
             </li>
@@ -68,13 +68,13 @@
             <li th:each="page : ${#numbers.sequence(1, books.totalPages)}"
                 class="page-item" th:classappend="${page == books.number + 1} ? 'active' : ''">
                 <a class="page-link"
-                   th:href="@{/books(title=${param.title}, brand=${param.brand}, year=${param.year}, page=${page})}"
+                   th:href="@{/api/books(title=${param.title}, brand=${param.brand}, year=${param.year}, page=${page})}"
                    th:text="${page}"></a>
             </li>
 
             <li class="page-item" th:classappend="${books.last} ? 'disabled' : ''">
                 <a class="page-link"
-                   th:href="@{/books(title=${param.title}, brand=${param.brand}, year=${param.year}, page=${books.number + 2})}">
+                   th:href="@{/api/books(title=${param.title}, brand=${param.brand}, year=${param.year}, page=${books.number + 2})}">
                     &raquo;
                 </a>
             </li>

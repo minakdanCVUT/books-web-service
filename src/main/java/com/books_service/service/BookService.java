@@ -42,6 +42,7 @@ public class BookService {
         checkId(id);
         // достаем обьект из Optional сразу, потому что есть проверка на существование айди
         Book book = bookRepository.findById(id).get();
+        bookRepository.delete(book);
     }
 
     public void updateBookById(Long id, BookDTO updateDTO) {
@@ -50,6 +51,7 @@ public class BookService {
         // достаем обьект из Optional сразу, потому что есть проверка на существование айди
         Book book = bookRepository.findById(id).get();
         book.updateBook(updateDTO);
+        bookRepository.save(book);
     }
 
     private void checkId(Long id){
