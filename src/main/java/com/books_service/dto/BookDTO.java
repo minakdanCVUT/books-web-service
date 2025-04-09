@@ -14,9 +14,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class BookDTO {
-    @NotNull(message = "Артикул не должен быть пустым")
+    @NotNull(message = "Артикул обязателен")
+    @NotBlank(message = "Артикул не должен быть пустым")
     private String vendorCode;
-    
+
+    @NotNull(message = "Название обязательно")
     @NotBlank(message = "Название не может быть пустым")
     private String title;
     
@@ -25,6 +27,7 @@ public class BookDTO {
     @Max(value = 2025, message = "Год не может быть больше текущего")
     private Integer year;
 
+    @NotNull(message = "Бренд обязателен")
     @NotBlank(message = "Бренд не может быть пустым")
     private String brand;
 
